@@ -55,56 +55,54 @@ h1{
     }
 } */
 
-.nav_links {
-    display: flex;
-    justify-content: center;
-    align-items: center;        
+.uk-navbar-container {
+    background-color: transparent !important;
 }
-
+.uk-navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 @media (max-width:650px) {
-    .nav_links {
+    .uk-navbar-nav {
         flex-direction: column;
     }
 }
-
-.nav_links > a {
+.uk-navbar-nav > li {
+    padding: 0 !important;
+}
+.uk-navbar-nav > li > a {
     background-color: var(--primary-color);
-    margin: .5vw;
-    /* vertical-align: middle; */
-    /* height: 24px; */
-    /* min-width: 90px; */
-    /* max-width:10vw; */
-    padding: 0 1vw 0 1vw;
-    /* font-size: 15px; */
-    font-size: clamp(.8rem,.8vw + .2rem, 4rem);
-    
+    margin: 2px !important;
+    padding: 0 8px !important;
+    font-size: clamp(.75rem, .8vw + .2rem, 1rem);
     border-style: solid;
     border-width: .5px;
     border-radius: 15vw;
     border-color: var(--secondary-color);
     transition: all .5s ease-out;
-}
-.nav_links > img {
-    width:20px;
-    width:20px;
-}
-
-.nav_links > a > div{
-    color: var(--nav-link-text-color);
+    color: var(--nav-link-text-color) !important;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-style: normal;
+    min-height: unset !important;
+    height: auto !important;
+    line-height: 1.8;
 }
-.nav_links > a:hover {
-    background-color: var(--secondary-color);
+.nav-arrow {
+    width: 12px;
+    margin: 0;
+    
+}
+.uk-navbar-nav > li > a:hover,
+.uk-navbar-nav > li > a:focus {
+    background-color: var(--secondary-color) !important;
     transform: scale(1.2);
     transition: all .8s ease-out;
-    /* color: green; */
+    color: var(--nav-link-text-color) !important;
 }
-.nav_links > a > div:visited {
-    color: var(--visited-color);
-}
-.nav_links > a > div:active {
+
+.uk-navbar-nav > li > a:active {
     text-shadow: 2px 2px 2px var(--primary-color);
 }
 section {
@@ -194,17 +192,6 @@ a.uk-link:hover {
 }
 .uk-text-lead {
     color: var(--text-color) !important;
-}
-.uk-navbar-container {
-    background-color: var(--bg-color) !important;
-}
-.uk-navbar-nav > li > a,
-.uk-navbar-item,
-.uk-navbar-toggle {
-    color: var(--text-color) !important;
-}
-.uk-navbar-nav > li > a:hover {
-    color: var(--secondary-color) !important;
 }
 
 /* UIKit table overrides */
