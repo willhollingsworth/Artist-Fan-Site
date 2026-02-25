@@ -1,0 +1,25 @@
+{
+  "name": "artist-fan-site",
+  "version": "1.0.0",
+  "description": "A frontend fan site for the artist Moderat, created to learn UIKit, JS, and jQuery.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willhollingsworth/Artist-Fan-Site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willhollingsworth/Artist-Fan-Site/issues"
+  },
+  "homepage": "https://github.com/willhollingsworth/Artist-Fan-Site#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}

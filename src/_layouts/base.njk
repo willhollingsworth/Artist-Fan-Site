@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <img src="/images/logo.jpg" class="img_title" alt="logo">
+        <h1>
+            Moderat
+        </h1>
+        <img src="/images/logo.jpg" class="img_title" alt="logo">
+    </header>
+    <nav>
+        <div class="nav_links">
+            <a href="/">
+                <div>Home</div>
+            </a>
+            <img src="/images/arrow.png" alt="arrow">
+            <a href="/biography/">
+                <div>Biography</div>
+            </a>
+            <img src="/images/arrow.png" alt="arrow">
+            <a href="/discography/">
+                <div>Discography</div>
+            </a>
+            <img src="/images/arrow.png" alt="arrow">
+            <a href="/video/">
+                <div>Video</div>
+            </a>
+        </div>
+    </nav>
+    <section>
+        {{ content | safe }}
+    </section>
+</body>
+</html>
