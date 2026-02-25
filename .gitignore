@@ -1,2 +1,5 @@
 node_modules/*
 _site/
+src/css/uikit.min.css
+src/js/uikit.min.js
+src/js/uikit-icons.min.js

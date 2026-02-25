@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
 
   // Copy static assets from src/ to _site/ without processing them
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "src/js": "js" });
   eleventyConfig.addPassthroughCopy({ "src/images": "images" });
 
   return {

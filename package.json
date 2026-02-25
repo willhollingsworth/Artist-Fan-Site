@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "eleventy --serve",
     "build": "eleventy",
-    "build-ghpages": "eleventy --pathprefix=/Artist-Fan-Site/"
+    "build-ghpages": "eleventy --pathprefix=/Artist-Fan-Site/",
+    "postinstall": "npm run copy-vendor",
+    "copy-vendor": "copyfiles -f node_modules/uikit/dist/css/uikit.min.css src/css/ && copyfiles -f node_modules/uikit/dist/js/uikit.min.js src/js/ && copyfiles -f node_modules/uikit/dist/js/uikit-icons.min.js src/js/"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,10 @@
   },
   "homepage": "https://github.com/willhollingsworth/Artist-Fan-Site#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0"
+    "@11ty/eleventy": "^2.0.0",
+    "copyfiles": "^2.4.1"
+  },
+  "dependencies": {
+    "uikit": "^3.25.13"
   }
 }
