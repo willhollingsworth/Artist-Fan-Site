@@ -1,4 +1,9 @@
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function (eleventyConfig) {
+  // Rewrites internal links/src attributes to respect pathPrefix at build time
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   // Copy static assets to _site without processing them
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("images");
