@@ -8,6 +8,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });
   eleventyConfig.addPassthroughCopy({ "src/images": "images" });
 
+    // Keep .html files flat — no subdirectory clean URLs
+    eleventyConfig.addGlobalData("permalink", () => {
+        return (data) => {
+            if (data.page.fileSlug === "") return "index.html";
+            return `${data.page.fileSlug}.html`;
+        };
+    });
+
   return {
     dir: {
       input: "src",       // Source pages 
@@ -16,4 +24,4 @@ module.exports = function (eleventyConfig) {
       layouts: "_layouts",   // Full-page layout templates
     },
   };
-};
+};;
