@@ -126,7 +126,8 @@ p,table,caption,.form-section{
 p {
     padding: 5px 10px 17px;
 }
-p::first-letter {
+p::first-letter,
+.uk-article-title::first-letter {
 font-size: 200%;
 color: var(--primary-color);
 }
@@ -191,6 +192,54 @@ a.uk-link:hover {
     color: var(--primary-color) !important;
 }
 .uk-text-lead {
+    color: var(--text-color) !important;
+}
+
+/* UIKit article overrides - single box wrapping all children */
+.uk-article {
+    background-color: var(--secondary-color-alpha);
+    border-style: solid;
+    border-color: var(--text-color);
+    border-radius: 30px;
+    border-width: 0.5px;
+    margin: 3px;
+    padding: 20px 30px;
+    text-align: left;
+    transition: all .5s ease-out;
+}
+
+.uk-article p,
+.uk-article table,
+.uk-article caption,
+.uk-article .uk-list {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.uk-article .uk-list {
+    padding: 5px 10px 5px 40px;
+}
+
+.uk-article-title {
+    color: var(--text-color) !important;
+}
+
+/* UIKit list overrides (standalone, outside article) */
+.uk-list {
+    background-color: var(--secondary-color-alpha);
+    border-style: solid;
+    border-color: var(--text-color);
+    border-radius: 30px;
+    border-width: 0.5px;
+    margin: 3px;
+    padding: 10px 30px 10px 50px;
+    text-align: left;
+    transition: all .5s ease-out;
+}
+
+.uk-list li {
     color: var(--text-color) !important;
 }
 
