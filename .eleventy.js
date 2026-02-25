@@ -1,20 +1,16 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
-  // Rewrites internal links/src attributes to respect pathPrefix at build time
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-  // Copy static assets to _site without processing them
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("images");
-
-  // Ignore the old flat HTML folder
-  eleventyConfig.ignores.add("html/");
+  // Copy static assets from src/ to _site/ without processing them
+  eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "src/images": "images" });
 
   return {
     dir: {
-      input: "src",       // Source pages live here
-      output: "_site",    // Built site is written here
+      input: "src",       // Source pages 
+      output: "_site",    // Built location
       includes: "_includes", // Reusable partials
       layouts: "_layouts",   // Full-page layout templates
     },
