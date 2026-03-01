@@ -13,10 +13,10 @@ jobs:
         with:
           node-version: '20'
       - run: npm install && npm run build
-      # Zip the built site
-      - run: cd _site && zip -r ../_site.zip . && cd ..
-      # Attach the zip file to the release
+      # Zip the built site with the version number
+      - run: cd _site && zip -r ../_site-${{ github.ref_name }}.zip . && cd ..
+      # Attach the versioned zip file to the release
       - uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: _site.zip
+          files: _site-${{ github.ref_name }}.zip
