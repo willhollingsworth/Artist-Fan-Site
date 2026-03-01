@@ -171,12 +171,12 @@ tr:nth-of-type(2n){
 .uk-button-primary {
     background-color: var(--secondary-color) !important;
     color: var(--nav-link-text-color) !important;
-    border-color: var(--secondary-color) !important;
+    border-color: transparent !important;
 }
 .uk-button-primary:hover,
 .uk-button-primary:focus {
     background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
+    border-color: transparent !important;
 }
 .uk-input:focus,
 .uk-select:focus,
